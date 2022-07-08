@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\piero\\OneDrive\\Área de Trabalho\\Produto.Functions.V2.End2End\\Simple2u.csproj": {}
+    "C:\\Users\\piero\\OneDrive\\Documentos\\GitHub\\Simple2u\\Simple2u.csproj": {}
   },
   "projects": {
-    "C:\\Users\\piero\\OneDrive\\Área de Trabalho\\Produto.Functions.V2.End2End\\Simple2u.csproj": {
+    "C:\\Users\\piero\\OneDrive\\Documentos\\GitHub\\Simple2u\\Simple2u.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\piero\\OneDrive\\Área de Trabalho\\Produto.Functions.V2.End2End\\Simple2u.csproj",
+        "projectUniqueName": "C:\\Users\\piero\\OneDrive\\Documentos\\GitHub\\Simple2u\\Simple2u.csproj",
         "projectName": "Simple2u",
-        "projectPath": "C:\\Users\\piero\\OneDrive\\Área de Trabalho\\Produto.Functions.V2.End2End\\Simple2u.csproj",
+        "projectPath": "C:\\Users\\piero\\OneDrive\\Documentos\\GitHub\\Simple2u\\Simple2u.csproj",
         "packagesPath": "C:\\Users\\piero\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\piero\\OneDrive\\Área de Trabalho\\Produto.Functions.V2.End2End\\obj\\",
+        "outputPath": "C:\\Users\\piero\\OneDrive\\Documentos\\GitHub\\Simple2u\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\piero\\AppData\\Roaming\\NuGet\\NuGet.Config",

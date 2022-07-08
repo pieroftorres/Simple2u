@@ -15,6 +15,5 @@ Cenário: Teste Cadastro
 	E que eu insira o Celular
 	E que eu configure as Coberturas
 	E que eu insira o CPF
-	E que eu pegue o Token
 	E que eu insira os Dados do Cartão
 	E que eu fique A Ver Navios

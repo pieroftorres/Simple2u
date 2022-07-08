@@ -5,17 +5,17 @@ using System.CodeDom.Compiler;
 using global::System.Runtime.CompilerServices;
 
 [assembly: global::Xunit.TestFramework("TechTalk.SpecFlow.xUnit.SpecFlowPlugin.XunitTestFrameworkWithAssemblyFixture", "TechTalk.SpecFlow.xUnit.SpecFlowPlugin")]
-[assembly: global::TechTalk.SpecFlow.xUnit.SpecFlowPlugin.AssemblyFixture(typeof(global::Produto_Functions_V2_End2End_XUnitAssemblyFixture))]
+[assembly: global::TechTalk.SpecFlow.xUnit.SpecFlowPlugin.AssemblyFixture(typeof(global::Simple2u_XUnitAssemblyFixture))]
 
 [GeneratedCode("SpecFlow", "3.9.74")]
-public class Produto_Functions_V2_End2End_XUnitAssemblyFixture : global::System.IDisposable
+public class Simple2u_XUnitAssemblyFixture : global::System.IDisposable
 {
     private readonly global::System.Reflection.Assembly _currentAssembly;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public Produto_Functions_V2_End2End_XUnitAssemblyFixture()
+    public Simple2u_XUnitAssemblyFixture()
     {
-        _currentAssembly = typeof(Produto_Functions_V2_End2End_XUnitAssemblyFixture).Assembly;
+        _currentAssembly = typeof(Simple2u_XUnitAssemblyFixture).Assembly;
         global::TechTalk.SpecFlow.TestRunnerManager.OnTestRunStart(_currentAssembly);
     }
 
@@ -27,7 +27,7 @@ public class Produto_Functions_V2_End2End_XUnitAssemblyFixture : global::System.
 }
 
 [global::Xunit.CollectionDefinition("SpecFlowNonParallelizableFeatures", DisableParallelization = true)]
-public class Produto_Functions_V2_End2End_SpecFlowNonParallelizableFeaturesCollectionDefinition
+public class Simple2u_SpecFlowNonParallelizableFeaturesCollectionDefinition
 {
 }
 #pragma warning restore

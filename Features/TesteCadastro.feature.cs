@@ -141,12 +141,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("que eu insira o CPF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 18
- testRunner.And("que eu pegue o Token", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line hidden
-#line 19
  testRunner.And("que eu insira os Dados do Cartão", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
-#line 20
+#line 19
  testRunner.And("que eu fique A Ver Navios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
