@@ -1,0 +1,492 @@
+﻿{
+  "generalConditionsNumber": "",
+  "status": "",
+  "tenant": {
+    "id": "33608308000173",
+    "name": "MAG Seguros"
+  },
+  "mainConditions": {
+    "actuary": "Teste Automatizado",
+    "type": "GRUPAL",
+    "startDate": "",
+    "endDate": null,
+    "paymentFrequency": [
+      {
+        "key": "MENSAL"
+      },
+      {
+        "key": "ANUAL"
+      }
+    ],
+    "cancellationConditions": [
+      {
+        "paymentFrequency": "MENSAL",
+        "period": 5,
+        "periodType": "parcelas",
+        "consecutive": false
+      },
+      {
+        "paymentFrequency": "ANUAL",
+        "period": 60,
+        "periodType": "dias",
+        "consecutive": true
+      }
+    ]
+  },
+  "actuarialConditions": {
+    "index": "igpm",
+    "load": [
+      {
+        "type": "comissao",
+        "minPercentMultiplier": 0,
+        "maxPercentMultiplier": 0.2
+      },
+      {
+        "type": "lucro",
+        "minPercentMultiplier": 0,
+        "maxPercentMultiplier": 0.2
+      },
+      {
+        "type": "despesaAdministrativa",
+        "minPercentMultiplier": 0,
+        "maxPercentMultiplier": 0.2
+      },
+      {
+        "type": "imposto",
+        "minPercentMultiplier": 0,
+        "maxPercentMultiplier": 0.1
+      },
+      {
+        "type": "capitalMinimoRequerido",
+        "minPercentMultiplier": 0,
+        "maxPercentMultiplier": 0.2
+      }
+    ],
+    "paymentFormats": [
+      {
+        "key": "BOLETO"
+      },
+      {
+        "key": "PIX"
+      }
+    ]
+  },
+  "readjustment": {
+    "frequency": "anual",
+    "when": "aniversarioProposta"
+  },
+  "coverages": [
+    {
+      "key": "MORTE",
+      "regulatoryId": "000001",
+      "surrenderValues": [
+        {
+          "key": "RESGATE BAC"
+        }
+      ],
+      "financialSystem": "RS",
+      "salesSegment": "VG",
+      "startingAge": 16,
+      "endingAge": 50,
+      "exclusionAge": 90,
+      "yearsTermLifeInsurance": [
+        5,
+        10
+      ],
+      "agePlusYearsTermLimit": 80,
+      "yearsPrivatePension": [
+        5,
+        10
+      ],
+      "yearsAntecipatingPayment": [
+        5,
+        10
+      ],
+      "yearsGuaranteePeriod": [
+        5,
+        10
+      ],
+      "yearsDefermentPeriod": [
+        5,
+        10
+      ],
+      "yearsDecreasingInsurance": [
+        2,
+        5
+      ],
+      "decreasingInsurances": [
+        {
+          "decreasingInsurance": 2,
+          "decreasingPercents": [
+            {
+              "year": 1,
+              "decreasingPercentMultiplier": 0.2
+            },
+            {
+              "year": 2,
+              "decreasingPercentMultiplier": 0.3
+            }
+          ]
+        },
+        {
+          "decreasingInsurance": 5,
+          "decreasingPercents": [
+            {
+              "year": 1,
+              "decreasingPercentMultiplier": 0.2
+            },
+            {
+              "year": 2,
+              "decreasingPercentMultiplier": 0.3
+            },
+            {
+              "year": 3,
+              "decreasingPercentMultiplier": 0.4
+            },
+            {
+              "year": 4,
+              "decreasingPercentMultiplier": 0.5
+            },
+            {
+              "year": 5,
+              "decreasingPercentMultiplier": 0.6
+            }
+          ]
+        }
+      ],
+      "profileAdjustment": [
+        {
+          "riskProfile": "Preferencial 1",
+          "percentMultiplier": -0.1
+        },
+        {
+          "riskProfile": "Subpradrão 2",
+          "percentMultiplier": 0.2
+        }
+      ],
+      "restrictions": [
+        {
+          "type": "franquiaDedutivel",
+          "period": 10,
+          "periodType": "dias"
+        },
+        {
+          "type": "carenciaSuicidio",
+          "period": 24,
+          "periodType": "meses",
+          "healthDeclarationReplaceRestriction": true
+        },
+        {
+          "type": "limiteDiarias",
+          "period": 365,
+          "periodType": "dias"
+        }
+      ],
+      "actuarialFormula": "reparticaoSimples",
+      "actuarialRates": [
+        {
+          "sex": "masculino",
+          "rates": [
+            {
+              "age": 16,
+              "rate": 0.0001
+            },
+            {
+              "age": 17,
+              "rate": 0.00011
+            },
+            {
+              "age": 18,
+              "rate": 0.00012
+            },
+            {
+              "age": 19,
+              "rate": 0.00013
+            },
+            {
+              "age": 20,
+              "rate": 0.00014
+            },
+            {
+              "age": 21,
+              "rate": 0.00015
+            },
+            {
+              "age": 22,
+              "rate": 0.00016
+            },
+            {
+              "age": 23,
+              "rate": 0.00017
+            },
+            {
+              "age": 24,
+              "rate": 0.00018
+            },
+            {
+              "age": 25,
+              "rate": 0.00019
+            },
+            {
+              "age": 26,
+              "rate": 0.0002
+            },
+            {
+              "age": 27,
+              "rate": 0.00021
+            },
+            {
+              "age": 28,
+              "rate": 0.00022
+            },
+            {
+              "age": 29,
+              "rate": 0.00023
+            },
+            {
+              "age": 30,
+              "rate": 0.00024
+            },
+            {
+              "age": 31,
+              "rate": 0.00025
+            },
+            {
+              "age": 32,
+              "rate": 0.00026
+            },
+            {
+              "age": 33,
+              "rate": 0.00027
+            },
+            {
+              "age": 34,
+              "rate": 0.00028
+            },
+            {
+              "age": 35,
+              "rate": 0.00029
+            },
+            {
+              "age": 36,
+              "rate": 0.0003
+            },
+            {
+              "age": 37,
+              "rate": 0.00031
+            },
+            {
+              "age": 38,
+              "rate": 0.00032
+            },
+            {
+              "age": 39,
+              "rate": 0.00033
+            },
+            {
+              "age": 40,
+              "rate": 0.00034
+            },
+            {
+              "age": 41,
+              "rate": 0.00035
+            },
+            {
+              "age": 42,
+              "rate": 0.00036
+            },
+            {
+              "age": 43,
+              "rate": 0.00037
+            },
+            {
+              "age": 44,
+              "rate": 0.00038
+            },
+            {
+              "age": 45,
+              "rate": 0.00039
+            },
+            {
+              "age": 46,
+              "rate": 0.0004
+            },
+            {
+              "age": 47,
+              "rate": 0.00041
+            },
+            {
+              "age": 48,
+              "rate": 0.00042
+            },
+            {
+              "age": 49,
+              "rate": 0.00043
+            },
+            {
+              "age": 50,
+              "rate": 0.00044
+            }
+          ]
+        },
+        {
+          "sex": "feminino",
+          "rates": [
+            {
+              "age": 16,
+              "rate": 0.0001
+            },
+            {
+              "age": 17,
+              "rate": 0.00011
+            },
+            {
+              "age": 18,
+              "rate": 0.00012
+            },
+            {
+              "age": 19,
+              "rate": 0.00013
+            },
+            {
+              "age": 20,
+              "rate": 0.00014
+            },
+            {
+              "age": 21,
+              "rate": 0.00015
+            },
+            {
+              "age": 22,
+              "rate": 0.00016
+            },
+            {
+              "age": 23,
+              "rate": 0.00017
+            },
+            {
+              "age": 24,
+              "rate": 0.00018
+            },
+            {
+              "age": 25,
+              "rate": 0.00019
+            },
+            {
+              "age": 26,
+              "rate": 0.0002
+            },
+            {
+              "age": 27,
+              "rate": 0.00021
+            },
+            {
+              "age": 28,
+              "rate": 0.00022
+            },
+            {
+              "age": 29,
+              "rate": 0.00023
+            },
+            {
+              "age": 30,
+              "rate": 0.00024
+            },
+            {
+              "age": 31,
+              "rate": 0.00025
+            },
+            {
+              "age": 32,
+              "rate": 0.00026
+            },
+            {
+              "age": 33,
+              "rate": 0.00027
+            },
+            {
+              "age": 34,
+              "rate": 0.00028
+            },
+            {
+              "age": 35,
+              "rate": 0.00029
+            },
+            {
+              "age": 36,
+              "rate": 0.0003
+            },
+            {
+              "age": 37,
+              "rate": 0.00031
+            },
+            {
+              "age": 38,
+              "rate": 0.00032
+            },
+            {
+              "age": 39,
+              "rate": 0.00033
+            },
+            {
+              "age": 40,
+              "rate": 0.00034
+            },
+            {
+              "age": 41,
+              "rate": 0.00035
+            },
+            {
+              "age": 42,
+              "rate": 0.00036
+            },
+            {
+              "age": 43,
+              "rate": 0.00037
+            },
+            {
+              "age": 44,
+              "rate": 0.00038
+            },
+            {
+              "age": 45,
+              "rate": 0.00039
+            },
+            {
+              "age": 46,
+              "rate": 0.0004
+            },
+            {
+              "age": 47,
+              "rate": 0.00041
+            },
+            {
+              "age": 48,
+              "rate": 0.00042
+            },
+            {
+              "age": 49,
+              "rate": 0.00043
+            },
+            {
+              "age": 50,
+              "rate": 0.00044
+            }
+          ]
+        }
+      ],
+      "ageGroupRates": [
+        {
+          "minAge": 16,
+          "maxAge": 30,
+          "rateAge": 17
+        },
+        {
+          "minAge": 31,
+          "maxAge": 35,
+          "rateAge": 33
+        }
+      ]
+    }
+  ]
+}

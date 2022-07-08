@@ -1,0 +1,74 @@
+﻿{
+  "productType": "lifeInsurance",
+  "generalConditionsId": "",
+  "generalConditionsNumber": "",
+  "status": "",
+  "tenant": {
+    "id": "33608308000173",
+    "name": "MAG Seguros"
+  },
+  "name": "",
+  "shortDescription": "ShortDescription",
+  "longDescription": "LongDescription",
+  "startDate": "",
+  "globalization": [
+    {
+      "language": "English",
+      "name": "Name Globalization",
+      "shortDescription": "ShortDescription Globalization",
+      "longDescription": "LongDescription Globalization"
+    }
+  ],
+  "billingOptions": {
+    "paymentFormats": [
+      {
+        "key": "BOLETO"
+      },
+      {
+        "key": "PIX"
+      }
+    ],
+    "paymentFrequency": [
+      {
+        "key": "MENSAL"
+      },
+      {
+        "key": "ANUAL"
+      }
+    ]
+  },
+  "insuranceDetails": {
+    "startingAge": 16,
+    "endingAge": 50,
+    "coverages": [
+      {
+        "key": "MORTE",
+        "name": "MORTE TESTE",
+        "tenant": {
+          "id": "33608308000173",
+          "name": "MAG Seguros"
+        },
+        "line": {
+          "key": "VG"
+        },
+        "insuredRelation": {
+          "key": "titular"
+        },
+        "shortDescription": "ShortDescription Coverage",
+        "longDescription": "LongDescription Coverage",
+        "mainCoverage": true,
+        "mandatoryCoverage": true,
+        "exclusionAge": 0,
+        "fixedCoverageAmount": 0,
+        "coverageDependencies": [],
+        "minCoverageAmount": 0
+      }
+    ],
+    "assistances": [],
+    "yearsTermLifeInsurance": [],
+    "yearsPrivatePensionInsurance": [],
+    "yearsDecreasingInsurance": [],
+    "yearsAntecipatingPayment": [],
+    "agePlusYearsTermLimit": 0
+  }
+}

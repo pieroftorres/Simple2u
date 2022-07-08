@@ -1,0 +1,69 @@
+﻿{
+  "unifiedProductType": "lifeInsurance",
+  "generalConditionsId": "b74b0ef8-ba1c-475e-ac4a-1637d7a841d6",
+  "tenant": {
+    "id": "33608308000173",
+    "name": "MAG Seguros"
+  },
+  "name": "",
+  "shortDescription": "ShortDescription",
+  "longDescription": "LongDescription",
+  "startSalesDate": "",
+  "status": "",
+  "globalization": [],
+  "billingOptions": {
+    "paymentFormats": [
+      {
+        "key": "BOLETO"
+      }
+    ],
+    "paymentFrequency": [
+      {
+        "key": "MENSAL"
+      }
+    ]
+  },
+  "insuranceDetails": {
+    "startingAge": 16,
+    "endingAge": 50,
+    "line": {
+      "key": "VG"
+    },
+    "coverages": [
+      {
+        "key": "MORTE",
+        "shortDescription": "ShortDescription coverage",
+        "longDescription": "LongDescription coverage",
+        "mainCoverage": true,
+        "mandatoryCoverage": true,
+        "exclusionAge": null,
+        "fixedCoverageAmount": 0,
+        "coverageDependencies": [],
+        "minCoverageAmount": 0
+      }
+    ],
+    "assistances": [],
+    "load": [
+      {
+        "type": "comissao",
+        "minPercent": 0,
+        "maxPercent": 20
+      },
+      {
+        "type": "lucro",
+        "minPercent": 0,
+        "maxPercent": 20
+      },
+      {
+        "type": "despesaAdministrativa",
+        "minPercent": 0,
+        "maxPercent": 20
+      }
+    ],
+    "yearsTermLifeInsurance": [],
+    "yearsPrivatePensionInsurance": [],
+    "yearsDecreasingInsurance": [],
+    "yearsAntecipatingPayment": [],
+    "agePlusYearsTermLimit": 0
+  }
+}
