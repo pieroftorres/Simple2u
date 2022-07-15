@@ -99,7 +99,11 @@ namespace Simple2u.PageObjects
         #endregion
 
         #region Cartão Pagamento
-        public void EntariFrame() => _helper.EntrarIframe();
+        public void EntariFrame()
+        {
+            Thread.Sleep(2000);
+            _helper.EntrarIframe();
+        }
 
         public void SairiFrame() => _helper.SairDefaultIframe();
 
@@ -109,7 +113,11 @@ namespace Simple2u.PageObjects
 
         public void InserirMesAno() => _helper.Escrever("//input[contains(@placeholder, 'MM/AA')]", "1222");
 
-        public void InserirCvc() => _helper.Escrever("//input[contains(@placeholder, 'CVC')]", "641");
+        public void InserirCvc()
+        {
+            _helper.Escrever("//input[contains(@placeholder, 'CVC')]", "641");
+            Thread.Sleep(3000);
+        }
         #endregion
 
         #region Extras
@@ -132,7 +140,7 @@ namespace Simple2u.PageObjects
         public void VerificarSeChegouUltimaPagina()
         {
             //_helper.AguardarLoading("//div[contains(@class, 'container-ana-text-size-customized')]");
-            Thread.Sleep(12000);
+            Thread.Sleep(25000);
             _helper.ValidarUrl("Parabens");
         }
     }
