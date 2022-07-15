@@ -14,34 +14,34 @@ namespace Simple2u.Hooks
     public sealed class WebDriver
     {
         public ConfigurationHelper config;
+        private readonly IWebDriver webdriver;
         private readonly IObjectContainer _objectContainer;
 
         public WebDriver(IObjectContainer objectContainer)
         {
-            config = new ConfigurationHelper();
             _objectContainer = objectContainer;
+            config = new ConfigurationHelper();
+            webdriver = WebDriverFactory.CreateWebDriver(config);
         }
 
         [BeforeScenario]
         public void BeforeScenario(FeatureContext featureContext, ScenarioContext scenarioContext)
         {
-            var webdriver = WebDriverFactory.CreateWebDriver(config);
-            var selenium = new SeleniumHelper(webdriver, config);
+            var selenium = new SeleniumHelper(webdriver);
 
             _objectContainer.RegisterInstanceAs(config);
             _objectContainer.RegisterInstanceAs(selenium);
-            _objectContainer.RegisterInstanceAs(webdriver);
 
-            if (selenium.RodandoNoBrowserStack())
+            if (config.RodandoNoBrowserStack)
             {
                 ((IJavaScriptExecutor)webdriver).ExecuteScript("browserstack_executor: {\"action\": \"setSessionName\", \"arguments\": {\"name\":\"" + FormatarTextoParaBrowserStack(featureContext.FeatureInfo.Title + ": " + scenarioContext.ScenarioInfo.Title) + "\"}}");
             }
         }
 
         [BeforeStep]
-        public void BeforeStep(ScenarioContext scenarioContext, SeleniumHelper selenium, IWebDriver webdriver)
+        public void BeforeStep(ScenarioContext scenarioContext)
         {
-            if (selenium.RodandoNoBrowserStack())
+            if (config.RodandoNoBrowserStack)
             {
                 var stepContext = scenarioContext.StepContext;
                 var text = "browserstack_executor: {\"action\": \"annotate\", \"arguments\": {\"data\":\"" + FormatarTextoParaBrowserStack(TextoStepDefinitionType(stepContext.StepInfo.StepDefinitionType)) + " " + FormatarTextoParaBrowserStack(stepContext.StepInfo.Text) + "\", \"level\": \"info" + "\"}}";
@@ -50,27 +50,21 @@ namespace Simple2u.Hooks
         }
 
         [AfterScenario]
-        public void AfterScenario(ScenarioContext scenarioContext, SeleniumHelper selenium, IWebDriver webdriver)
+        public void AfterScenario(ScenarioContext scenarioContext, SeleniumHelper selenium)
         {
             if (null != scenarioContext.TestError)
             {
-                if (selenium.RodandoNoBrowserStack())
+                if (config.RodandoNoBrowserStack)
                     ((IJavaScriptExecutor)webdriver).ExecuteScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"failed\", \"reason\": \" Erro no cenario - " + FormatarTextoParaBrowserStack(scenarioContext.ScenarioInfo.Title) + " | " + FormatarTextoParaBrowserStack(scenarioContext.TestError.Message) + "\"}}");
             }
             else
             {
-                if (selenium.RodandoNoBrowserStack())
+                if (config.RodandoNoBrowserStack)
                     ((IJavaScriptExecutor)webdriver).ExecuteScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"passed\", \"reason\": \" Sucesso no cenario - " + FormatarTextoParaBrowserStack(scenarioContext.ScenarioInfo.Title) + "\"}}");
             }
 
             selenium.Dispose();
         }
-
-        //[AfterFeature]
-        //public static void AfterFeature(SeleniumHelper selenium)
-        //{
-        //    selenium.Dispose();
-        //}
 
         private string TextoStepDefinitionType(StepDefinitionType stepDefinitionType)
         {

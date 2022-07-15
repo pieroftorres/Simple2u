@@ -19,7 +19,7 @@ namespace Simple2u.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class TesteCadastroFeature : object, Xunit.IClassFixture<TesteCadastroFeature.FixtureData>, System.IDisposable
+    public partial class CadastroAPPeriodoFeature : object, Xunit.IClassFixture<CadastroAPPeriodoFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace Simple2u.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "TesteCadastro.feature"
+#line 1 "CadastroAPPeriodo.feature"
 #line hidden
         
-        public TesteCadastroFeature(TesteCadastroFeature.FixtureData fixtureData, Simple2u_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CadastroAPPeriodoFeature(CadastroAPPeriodoFeature.FixtureData fixtureData, Simple2u_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace Simple2u.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-BR"), "Features", "Teste Cadastro", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-BR"), "Features", "Cadastro AP Período", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,14 +80,14 @@ namespace Simple2u.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Teste Cadastro")]
-        [Xunit.TraitAttribute("FeatureTitle", "Teste Cadastro")]
-        [Xunit.TraitAttribute("Description", "Teste Cadastro")]
-        public void TesteCadastro()
+        [Xunit.SkippableFactAttribute(DisplayName="Cadastro AP Período")]
+        [Xunit.TraitAttribute("FeatureTitle", "Cadastro AP Período")]
+        [Xunit.TraitAttribute("Description", "Cadastro AP Período")]
+        public void CadastroAPPeriodo()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teste Cadastro", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cadastro AP Período", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -108,42 +108,36 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("que eu responda com Não se tenho conta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 7
- testRunner.And("que eu clique em Acidentes Pessoais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu selecione o seguro Acidentes Pessoais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 8
  testRunner.And("que eu insira os Dados Pessoais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 9
- testRunner.And("que eu clique no seguro Para o dia a dia", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu clique no seguro Por um período", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 10
- testRunner.And("que eu clique no dia Segunda", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu selecione o período 19, July 2022. até 26, July 2022.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 11
- testRunner.And("que eu clique no dia Quarta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line hidden
-#line 12
- testRunner.And("que eu clique no dia Sexta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line hidden
-#line 13
  testRunner.And("que eu clique em Avançar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
-#line 14
+#line 12
  testRunner.And("que eu selecione horas segurado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
-#line 15
+#line 13
  testRunner.And("que eu insira o Celular", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
-#line 16
+#line 14
  testRunner.And("que eu configure as Coberturas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
-#line 17
+#line 15
  testRunner.And("que eu insira o CPF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
-#line 18
+#line 16
  testRunner.And("que eu insira os Dados do Cartão", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
-#line 19
+#line 17
  testRunner.And("que eu fique A Ver Navios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
@@ -157,12 +151,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                TesteCadastroFeature.FeatureSetup();
+                CadastroAPPeriodoFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                TesteCadastroFeature.FeatureTearDown();
+                CadastroAPPeriodoFeature.FeatureTearDown();
             }
         }
     }

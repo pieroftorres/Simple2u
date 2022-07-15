@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CadastroAPDiaADia - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\PostGeneralConditionsEmAprovacaoErro - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\TesteCadastro - Copy.feature.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,11 +21,32 @@
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="103.0.5060.5300" />
     <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
     <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\CadastroResid.feature.cs">
+      <DependentUpon>CadastroResid.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\CadastroAPPeriodo.feature.cs">
+      <DependentUpon>CadastroAPPeriodo.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\CadastroResid.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\CadastroAPPeriodo.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
   </ItemGroup>
 
 </Project>

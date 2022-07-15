@@ -9,6 +9,16 @@ namespace Simple2u.PageObjects
 
         public void IrEmail(string url) => _helper.IrParaUrl(url);
 
+        public string MudarAba()
+        {
+            var nomeAba = _helper.NomeAbaAtual();
+            _helper.AbrirMudarNovaAba();
+
+            return nomeAba;
+        }
+
+        public void VoltarAba(string nomeAba) => _helper.MudarAba(nomeAba);
+
         public void LoginEmail(string usuario, string senha)
         {
             _helper.Escrever("//input[@id='i0116']", usuario);
@@ -52,5 +62,7 @@ namespace Simple2u.PageObjects
             _helper.Escrever("//div[contains(@id, 'virtualEditScroller')]/div[@aria-label='Corpo da mensagem']", resposta);
             _helper.Clicar("//button[@aria-label='Enviar']");
         }
+
+        public string CopiarToken() => _helper.ProcurarElemento("//span[contains(@style, 'font-weight:bold;')]").Text;
     }
 }

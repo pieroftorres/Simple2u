@@ -1,9 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Simple2u.Enums;
 using SeleniumExtras.WaitHelpers;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
 using System.IO;
@@ -19,11 +17,9 @@ namespace Simple2u.Config
         private readonly IWebDriver _driver;
         private readonly Actions actions;
         private readonly WebDriverWait wait;
-        private readonly ConfigurationHelper _config;
 
-        public SeleniumHelper(IWebDriver driver, ConfigurationHelper config)
+        public SeleniumHelper(IWebDriver driver)
         {
-            _config = config;
             _driver = driver;
             driver.Manage().Window.Position = new Point(-2000, 0);
             driver.Manage().Window.Maximize();
@@ -310,26 +306,10 @@ namespace Simple2u.Config
         #region Extras
         public void Print(string nomePrint, string msgConsole)
         {
-            if (!RodandoNoBrowserStack())
-            {
-                string diretorioPrint = string.Format(@$"{Directory.GetCurrentDirectory()}/{nomePrint}_{DateTime.Now:dd-MM-yyyy_HH_mm_ss}.png");
+            string diretorioPrint = string.Format(@$"{Directory.GetCurrentDirectory()}/{nomePrint}_{DateTime.Now:dd-MM-yyyy_HH_mm_ss}.png");
 
-                ((ITakesScreenshot)_driver).GetScreenshot().SaveAsFile(diretorioPrint);
-                Console.WriteLine($"{msgConsole}: {new Uri(diretorioPrint)}");
-            }
-        }
-
-        public bool RodandoNoBrowserStack()
-        {
-            var browserStackBrowsers = new List<Browser>
-            {
-                Browser.BSSafari,
-                Browser.BSChrome,
-                Browser.BSEdge,
-                Browser.BSFirefox
-            };
-
-            return browserStackBrowsers.Contains(_config.Browser);
+            ((ITakesScreenshot)_driver).GetScreenshot().SaveAsFile(diretorioPrint);
+            Console.WriteLine($"{msgConsole}: {new Uri(diretorioPrint)}");
         }
 
         public void AguardarTotalCarregamento(int tempo = 30)
@@ -352,42 +332,7 @@ namespace Simple2u.Config
             action.KeyDown(Keys.ArrowUp).Release().Build().Perform();
         }
 
-        public void AVerNavios(int milesimos = 50000) => Thread.Sleep(milesimos);
-
-        public static String GerarCpf()
-        {
-            int soma = 0, resto = 0;
-            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-
-            Random rnd = new Random();
-            string semente = rnd.Next(100000000, 999999999).ToString();
-
-            for (int i = 0; i < 9; i++)
-                soma += int.Parse(semente[i].ToString()) * multiplicador1[i];
-
-            resto = soma % 11;
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-
-            semente = semente + resto;
-            soma = 0;
-
-            for (int i = 0; i < 10; i++)
-                soma += int.Parse(semente[i].ToString()) * multiplicador2[i];
-
-            resto = soma % 11;
-
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-
-            semente = semente + resto;
-            return semente;
-        }
+        
 
         #endregion
 
@@ -397,23 +342,18 @@ namespace Simple2u.Config
             _driver.Dispose();
         }
 
-        public void TesteToken()
+        public void GerenciarHorasOuVerba()
         {
-            ProcurarElemento("//span[contains(@style, 'font-weight:bold;')]");
-            var EspacoDoToken = _driver.FindElement(By.XPath("//span[contains(@style, 'font-weight:bold;')]"));
-            var CapturarToken = EspacoDoToken.GetAttribute("span");
+            Actions action = new Actions(_driver);
 
-            FechaAbaAtual();
-
+            Clicar("//div[contains(@class, 'noUi-touch-area')]");
+            action.KeyDown(Keys.ArrowDown).Release().Build().Perform();
+            Thread.Sleep(7000);
+            Clicar("//div[contains(@class, 'noUi-touch-area')]");
+            action.KeyDown(Keys.ArrowDown).Release().Build().Perform();
             Thread.Sleep(3000);
-
-            Escrever("//input[contains(@id, 'Input_Cod1')]", CapturarToken);
-            
-            
-            
-            //var InserirToken = _driver.FindElement(By.XPath("//input[contains(@id, 'Input_Cod1')]"));
-            //InserirToken.Clear();
-            //InserirToken.SendKeys(CapturarToken);
         }
+
+
     }
 }

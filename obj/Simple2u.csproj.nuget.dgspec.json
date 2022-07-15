@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[3.9.74, )"
             },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.3, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.1, )"

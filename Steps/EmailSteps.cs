@@ -1,4 +1,5 @@
 ﻿using Simple2u.Config;
+using Simple2u.Models;
 using Simple2u.PageObjects;
 using TechTalk.SpecFlow;
 
@@ -8,11 +9,12 @@ namespace Simple2u.Steps
     public class EmailSteps
     {
         private readonly ConfigurationHelper _config;
-
+        private readonly CodigoVerificacao _codigoVerificacao;
         private readonly EmailPage emailPage;
 
-        public EmailSteps(SeleniumHelper helper, ConfigurationHelper config)
+        public EmailSteps(SeleniumHelper helper, ConfigurationHelper config, CodigoVerificacao codigoVerificacao)
         {
+            _codigoVerificacao = codigoVerificacao;
             _config = config;
             emailPage = new EmailPage(helper);
         }
@@ -39,6 +41,18 @@ namespace Simple2u.Steps
         {
             emailPage.SelecionarEmail();
             emailPage.ResponderEmail(resposta);
+        }
+
+        [Given(@"que eu acesse o email e pegue o token")]
+        public void GivenQueEuAcesseOEmailEPegueOToken()
+        {
+            var nomeAba = emailPage.MudarAba();
+            emailPage.IrEmail(_config.Url("Email"));
+            emailPage.LoginEmail(_config.UsuarioEmail, _config.SenhaEmail);
+            emailPage.PesquisarEmail("Aqui está o seu código temporário de verificação:");
+            emailPage.SelecionarEmail();
+            _codigoVerificacao.Codigo = emailPage.CopiarToken();
+            emailPage.VoltarAba(nomeAba);
         }
     }
 }

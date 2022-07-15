@@ -16,6 +16,7 @@
           "Selenium.WebDriver.ChromeDriver": "103.0.5060.5300",
           "SpecFlow.Plus.LivingDocPlugin": "3.9.57",
           "SpecFlow.xUnit": "3.9.74",
+          "Xamarin.Essentials": "1.7.3",
           "xunit": "2.4.1",
           "xunit.runner.visualstudio": "2.4.5"
         },
@@ -922,6 +923,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Numerics.Vectors/4.5.0": {},
       "System.ObjectModel/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1330,6 +1332,17 @@
           "lib/netstandard1.3/Validation.dll": {
             "assemblyVersion": "2.4.0.0",
             "fileVersion": "2.4.18.58985"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.7.3": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -1915,6 +1928,13 @@
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
     },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
     "System.ObjectModel/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -2201,6 +2221,13 @@
       "sha512": "sha512-NfvWJ1QeuZ1FQCkqgXTu1cOkRkbNCfxs4Tat+abXLwom6OXbULVhRGp34BTvVB4XPxj6VIAl7KfLfStXMt/Ehw==",
       "path": "validation/2.4.18",
       "hashPath": "validation.2.4.18.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.7.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b6NfxOfkmMGN54a4OcV/D7KXclWWqFwgixMPzlAku3kfKgUBGW4vBdNaujIBmk57NbGpWB2IS78ek0gDHNKwoQ==",
+      "path": "xamarin.essentials/1.7.3",
+      "hashPath": "xamarin.essentials.1.7.3.nupkg.sha512"
     },
     "xunit/2.4.1": {
       "type": "package",
