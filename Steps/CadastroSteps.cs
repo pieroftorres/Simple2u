@@ -1,6 +1,7 @@
 ﻿using Simple2u.Config;
 using Simple2u.Models;
 using Simple2u.PageObjects;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Simple2u.Steps
@@ -64,6 +65,7 @@ namespace Simple2u.Steps
         [Given(@"que eu insira o Celular")]
         public void GivenQueEuInsiraOCelular()
         {
+            Thread.Sleep(1000);
             cadastroPage.InserirCelular();
             cadastroPage.ClicarAvancar();
         }
@@ -79,6 +81,7 @@ namespace Simple2u.Steps
         [Given(@"que eu insira os Dados do Cartão")]
         public void GivenQueEuInsiraOsDadosDoCartao()
         {
+            Thread.Sleep(2000);
             cadastroPage.EsperarLoading();
             cadastroPage.EntariFrame();
             cadastroPage.InserirNumeroCartao();
@@ -110,11 +113,14 @@ namespace Simple2u.Steps
         [Given(@"que eu insira o Código de Verificação")]
         public void GivenQueEuInsiraOCodigoDeVerificacao()
         {
-            for (int i = 1; i <= 4; i++)
-            {
-                cadastroPage.InserirCodigoVerificacao(i, _codigoVerificacao.Codigo[i-1]);
-            }
+            cadastroPage.InserirCodigoVerificacao(_codigoVerificacao.Codigo);
             cadastroPage.ClicarConfirmarCodigoVerificacao();
+            /*for (int i = 1; i <= 4; i++)
+            {
+                //cadastroPage.InserirCodigoVerificacao(i, _codigoVerificacao.Codigo[i-1]);
+                cadastroPage.InserirCodigoVerificacao(_codigoVerificacao.Codigo);
+            }
+            cadastroPage.ClicarConfirmarCodigoVerificacao();*/
         }
 
         [Given(@"que eu verifique se chegou a última página")]
@@ -122,5 +128,8 @@ namespace Simple2u.Steps
         {
             cadastroPage.VerificarSeChegouUltimaPagina();
         }
+
+        [Given(@"que eu aguarde o Loading")]
+        public void GivenQueEuAguardeOLoading() => cadastroPage.EsperarLoading();
     }
 }

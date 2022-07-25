@@ -68,7 +68,7 @@ namespace Simple2u.PageObjects
         #endregion
 
         #region Telefone Tipo Produto AP
-        public void InserirCelular() => _helper.Escrever("//input[contains(@placeholder, 'Insira seu celular')]", "11987654321");
+        public void InserirCelular() => _helper.Escrever("//input[contains(@id, 'input_telefone')]", "11987654321");
         #endregion
 
         #region Coberturas Plano Personalizado
@@ -133,14 +133,14 @@ namespace Simple2u.PageObjects
         }
         #endregion
 
-        public void InserirCodigoVerificacao(int id, char codigoVerificacao) => _helper.Escrever($"//input[contains(@id, '{id}')]", codigoVerificacao.ToString());
+        public void InserirCodigoVerificacao(string codigoVerificacao) => _helper.Escrever($"//input[contains(@id, 'b3-Input_Cod1')]", codigoVerificacao.ToString());
 
-        public void ClicarConfirmarCodigoVerificacao() => _helper.Clicar("//button[contains(@class, 'button-mag btn-default-mag btn-small-mag next-button-width')]");
+        public void ClicarConfirmarCodigoVerificacao() => _helper.Clicar("//span[contains(text(), 'Confirmar')]");
 
         public void VerificarSeChegouUltimaPagina()
         {
             //_helper.AguardarLoading("//div[contains(@class, 'container-ana-text-size-customized')]");
-            Thread.Sleep(25000);
+            Thread.Sleep(15000);
             _helper.ValidarUrl("Parabens");
         }
     }

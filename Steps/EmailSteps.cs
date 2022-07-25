@@ -1,6 +1,7 @@
 ﻿using Simple2u.Config;
 using Simple2u.Models;
 using Simple2u.PageObjects;
+using System;
 using TechTalk.SpecFlow;
 
 namespace Simple2u.Steps
@@ -52,6 +53,7 @@ namespace Simple2u.Steps
             emailPage.PesquisarEmail("Aqui está o seu código temporário de verificação:");
             emailPage.SelecionarEmail();
             _codigoVerificacao.Codigo = emailPage.CopiarToken();
+            emailPage.JSScript($"console.log({_codigoVerificacao.Codigo});");
             emailPage.VoltarAba(nomeAba);
         }
     }

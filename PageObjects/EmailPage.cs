@@ -64,5 +64,7 @@ namespace Simple2u.PageObjects
         }
 
         public string CopiarToken() => _helper.ProcurarElemento("//span[contains(@style, 'font-weight:bold;')]").Text;
+
+        public void JSScript(string code) => _helper.JSScript(code);
     }
 }

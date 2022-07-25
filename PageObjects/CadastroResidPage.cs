@@ -33,7 +33,10 @@ namespace Simple2u.PageObjects
 
         public void ResidencialProprietario(string proprioOuAlugado) => _helper.Clicar($"//div[contains(text(), '{proprioOuAlugado}')]");
 
-        public void TelefoneResid(string celular) => _helper.Escrever("//input[contains(@placeholder, 'Insira seu celular')]", celular);
+        public void TelefoneResid(string celular)
+        {
+            _helper.Escrever("//input[contains(@placeholder, 'Insira seu celular')]", celular);
+        }
 
         public void EscolherPlano(string plano) => _helper.Clicar($"//span[contains(text(), '{plano}')]/../..//span[contains(text(), 'Escolher Plano')]");
         #endregion

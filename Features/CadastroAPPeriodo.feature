@@ -7,11 +7,13 @@ Cenário: Cadastro AP Período
 	E que eu selecione o seguro Acidentes Pessoais
 	E que eu insira os Dados Pessoais
 	E que eu clique no seguro Por um período
-	E que eu selecione o período 19, July 2022. até 26, July 2022.
+	E que eu selecione o período 26, July 2022. até 30, July 2022.
 	E que eu clique em Avançar
 	E que eu selecione horas segurado
 	E que eu insira o Celular
 	E que eu configure as Coberturas
 	E que eu insira o CPF
+	E que eu acesse o email e pegue o token
+	E que eu insira o Código de Verificação
 	E que eu insira os Dados do Cartão
-	E que eu fique A Ver Navios
+	E que eu verifique se chegou a última página

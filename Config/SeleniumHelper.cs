@@ -134,7 +134,7 @@ namespace Simple2u.Config
         #endregion
 
         #region Mouse
-        public void Clicar(string xpath, int tempo = 50)
+        public void Clicar(string xpath, int tempo = 30)
         {
             var elemento = ProcurarElemento(xpath, tempo);
             wait.Timeout = TimeSpan.FromSeconds(tempo);
@@ -175,7 +175,7 @@ namespace Simple2u.Config
         #endregion
 
         #region Teclado
-        public void Escrever(string xpath, string texto, int tempo = 50)
+        public void Escrever(string xpath, string texto, int tempo = 30)
         {
             var elemento = ProcurarElemento(xpath, tempo);
             wait.Timeout = TimeSpan.FromSeconds(tempo);
@@ -354,6 +354,11 @@ namespace Simple2u.Config
             Thread.Sleep(3000);
         }
 
+        public void JSScript(string code)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript(code);
+        }
 
     }
 }

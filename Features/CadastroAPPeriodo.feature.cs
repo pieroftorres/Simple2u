@@ -117,7 +117,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("que eu clique no seguro Por um período", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 10
- testRunner.And("que eu selecione o período 19, July 2022. até 26, July 2022.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu selecione o período 26, July 2022. até 30, July 2022.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 11
  testRunner.And("que eu clique em Avançar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
@@ -135,10 +135,16 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("que eu insira o CPF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 16
- testRunner.And("que eu insira os Dados do Cartão", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu acesse o email e pegue o token", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 17
- testRunner.And("que eu fique A Ver Navios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu insira o Código de Verificação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 18
+ testRunner.And("que eu insira os Dados do Cartão", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 19
+ testRunner.And("que eu verifique se chegou a última página", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
             this.ScenarioCleanup();
