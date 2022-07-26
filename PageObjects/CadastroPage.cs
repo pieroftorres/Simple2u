@@ -15,7 +15,7 @@ namespace Simple2u.PageObjects
 
         public void EsperarLoading() => _helper.AguardarLoading("//div[@data-block='ShowCase.IsLoading']");
 
-        public void ClicarSimular() => _helper.Clicar("//button[contains(@class, 'btn-simular')]");
+        public void ClicarSimular() => _helper.Clicar("//div[contains(@class, 'menu-web-large')]/..//button[contains(@class, 'button-mag btn-default-mag btn-small-mag')]"); // "//button[contains(@class, 'btn-simular')]"
         #endregion
 
         #region Já Possui Conta

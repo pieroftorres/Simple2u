@@ -3,7 +3,7 @@
 Cenário: Cadastro AP Dia a Dia
 	Dado que eu acesse a url
 	E que eu inicie a Simulação
-	E que eu responda com Não se tenho conta
+	E que eu responda com Sim se tenho conta
 	E que eu selecione o seguro Acidentes Pessoais
 	E que eu insira os Dados Pessoais
 	E que eu clique no seguro Para o dia a dia

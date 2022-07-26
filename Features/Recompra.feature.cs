@@ -19,7 +19,7 @@ namespace Simple2u.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class CadastroAPDiaADiaFeature : object, Xunit.IClassFixture<CadastroAPDiaADiaFeature.FixtureData>, System.IDisposable
+    public partial class RecompraFeature : object, Xunit.IClassFixture<RecompraFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace Simple2u.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "CadastroAPDiaADia.feature"
+#line 1 "Recompra.feature"
 #line hidden
         
-        public CadastroAPDiaADiaFeature(CadastroAPDiaADiaFeature.FixtureData fixtureData, Simple2u_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public RecompraFeature(RecompraFeature.FixtureData fixtureData, Simple2u_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace Simple2u.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-BR"), "Features", "Cadastro AP Dia a Dia", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-BR"), "Features", "Recompra", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,14 +80,14 @@ namespace Simple2u.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Cadastro AP Dia a Dia")]
-        [Xunit.TraitAttribute("FeatureTitle", "Cadastro AP Dia a Dia")]
-        [Xunit.TraitAttribute("Description", "Cadastro AP Dia a Dia")]
-        public void CadastroAPDiaADia()
+        [Xunit.SkippableFactAttribute(DisplayName="Recompra")]
+        [Xunit.TraitAttribute("FeatureTitle", "Recompra")]
+        [Xunit.TraitAttribute("Description", "Recompra")]
+        public void Recompra()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cadastro AP Dia a Dia", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Recompra", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -105,52 +105,43 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("que eu inicie a Simulação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 6
- testRunner.And("que eu responda com Sim se tenho conta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu confirme que tenho conta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 7
- testRunner.And("que eu selecione o seguro Acidentes Pessoais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu insira o CPF já cadastrado 25698995001", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 8
- testRunner.And("que eu insira os Dados Pessoais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu selecione o seguro Residencial", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 9
- testRunner.And("que eu clique no seguro Para o dia a dia", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu clique no seguro Assinatura mensal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 10
- testRunner.And("que eu clique no dia Segunda", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu informe no endereço o CEP 49010070, o Número 100 e o Complemento A", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 11
- testRunner.And("que eu clique no dia Quarta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu selecione o imóvel Apartamento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 12
- testRunner.And("que eu clique no dia Sexta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu informe se o imóvel está localizado em zona rural: Não", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 13
- testRunner.And("que eu clique em Avançar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu informe que o imóvel segurado é para Moradia principal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 14
- testRunner.And("que eu selecione horas segurado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu informe que o imóvel é Próprio", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 15
- testRunner.And("que eu insira o Celular", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu escolha a assinatura Plano completo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 16
- testRunner.And("que eu configure as Coberturas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu clique em Avançar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 17
- testRunner.And("que eu insira o CPF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu insira a senha", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 18
- testRunner.And("que eu acesse o email e pegue o token", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line hidden
-#line 19
- testRunner.And("que eu insira o Código de Verificação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line hidden
-#line 20
- testRunner.And("que eu insira os Dados do Cartão", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line hidden
-#line 21
- testRunner.And("que eu verifique se chegou a última página", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu selecione o cartão para recorrência", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -163,12 +154,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                CadastroAPDiaADiaFeature.FeatureSetup();
+                RecompraFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                CadastroAPDiaADiaFeature.FeatureTearDown();
+                RecompraFeature.FeatureTearDown();
             }
         }
     }
