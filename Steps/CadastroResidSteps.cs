@@ -26,8 +26,6 @@ namespace Simple2u.Steps
         {
             cadastroResidPage.ResidencialInicio(nome, email);
             cadastroPage.ClicarAvancar();
-            cadastroPage.ClicarAvancar();
-            cadastroPage.ClicarAvancar();
         }
 
         [Given(@"que eu proteja o imóvel com (.*)")]

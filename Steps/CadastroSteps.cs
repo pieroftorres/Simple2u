@@ -65,7 +65,7 @@ namespace Simple2u.Steps
         [Given(@"que eu insira o Celular")]
         public void GivenQueEuInsiraOCelular()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             cadastroPage.InserirCelular();
             cadastroPage.ClicarAvancar();
         }
@@ -102,6 +102,7 @@ namespace Simple2u.Steps
         [Given(@"que eu configure as Coberturas")]
         public void GivenQueEuConfigureAsCoberturas()
         {
+            Thread.Sleep(2000);
             cadastroPage.PersonalizarSeguro();
             cadastroPage.ScrollarParaAssistencias();
             cadastroPage.ClicarAvancar();
@@ -123,6 +124,13 @@ namespace Simple2u.Steps
             cadastroPage.ClicarConfirmarCodigoVerificacao();*/
         }
 
+        [Given(@"que eu insira o Código de Verificação Recompra")]
+        public void GivenQueEuInsiraOCodigoDeVerificacaoRecompra()
+        {
+            cadastroPage.InserirCodigoVerificacaoRecompra(_codigoVerificacao.Codigo);
+            cadastroPage.ClicarConfirmarCodigoVerificacao();
+        }
+
         [Given(@"que eu verifique se chegou a última página")]
         public void GivenQueEuVerifiqueSeChegouAUltimaPagina()
         {
@@ -131,5 +139,13 @@ namespace Simple2u.Steps
 
         [Given(@"que eu aguarde o Loading")]
         public void GivenQueEuAguardeOLoading() => cadastroPage.EsperarLoading();
+
+        [Given(@"que eu não altere as Coberturas")]
+        public void GivenQueEuNaoAltereAsCoberturas()
+        {
+            Thread.Sleep(7000);
+            cadastroPage.ScrollarParaAssistencias();
+            cadastroPage.ClicarAvancar();
+        }
     }
 }

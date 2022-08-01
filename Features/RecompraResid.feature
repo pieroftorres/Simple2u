@@ -1,6 +1,6 @@
-﻿Funcionalidade: Recompra
+﻿Funcionalidade: Recompra Resid
 
-Cenário: Recompra
+Cenário: Recompra Resid
 	Dado que eu acesse a url
 	E que eu inicie a Simulação
 	E que eu confirme que tenho conta

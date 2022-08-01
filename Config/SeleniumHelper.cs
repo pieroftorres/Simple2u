@@ -330,10 +330,7 @@ namespace Simple2u.Config
             action.KeyDown(Keys.ArrowUp).Release().Build().Perform();
             action.KeyDown(Keys.ArrowUp).Release().Build().Perform();
             action.KeyDown(Keys.ArrowUp).Release().Build().Perform();
-        }
-
-        
-
+        }        
         #endregion
 
         public void Dispose()
@@ -346,10 +343,10 @@ namespace Simple2u.Config
         {
             Actions action = new Actions(_driver);
 
-            Clicar("//div[contains(@class, 'noUi-touch-area')]");
+            Clicar("//span[contains(text(), 'falecer vítima de algum acidente')]/../..//div[contains(@class, 'noUi-touch-area')]");   //("//div[contains(@id, 'l1-111_5-$b6')]/..//div[contains(@class, 'noUi-touch-area')]");  //("//div[contains(@class, 'noUi-touch-area')]");
             action.KeyDown(Keys.ArrowDown).Release().Build().Perform();
             Thread.Sleep(7000);
-            Clicar("//div[contains(@class, 'noUi-touch-area')]");
+            Clicar("//span[contains(text(), 'falecer vítima de algum acidente')]/../..//div[contains(@class, 'noUi-touch-area')]");    //("//div[contains(@id, 'l1-111_5-$b6')]/..//div[contains(@class, 'noUi-touch-area')]");
             action.KeyDown(Keys.ArrowDown).Release().Build().Perform();
             Thread.Sleep(3000);
         }
@@ -360,5 +357,12 @@ namespace Simple2u.Config
             js.ExecuteScript(code);
         }
 
+        public void DuploClique(string elemento)
+        {
+            IWebElement clickable = _driver.FindElement(By.Id(elemento));
+            new Actions(_driver)
+                .DoubleClick(clickable)
+                .Perform();
+        }
     }
 }

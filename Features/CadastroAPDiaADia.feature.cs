@@ -105,7 +105,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("que eu inicie a Simulação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 6
- testRunner.And("que eu responda com Sim se tenho conta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu responda com Não se tenho conta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 7
  testRunner.And("que eu selecione o seguro Acidentes Pessoais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");

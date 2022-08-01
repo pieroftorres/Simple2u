@@ -38,7 +38,7 @@ namespace Simple2u.PageObjects
         public void InserirProfissao()
         {
             _helper.Clicar("//div[contains(text(), 'Insira sua profissão')]");
-            _helper.Clicar("//div[contains(@id, 'choices--b5-DropdownSelect-item-choice-42')]");
+            _helper.Clicar("//div[contains(@id, 'choices--b5-DropdownSelect-item-choice-42')]");  //("//div[contains(@id, 'choices--b5-DropdownSelect-item-choice-42')]");
         }
         #endregion
 
@@ -68,7 +68,10 @@ namespace Simple2u.PageObjects
         #endregion
 
         #region Telefone Tipo Produto AP
-        public void InserirCelular() => _helper.Escrever("//input[contains(@id, 'input_telefone')]", "11987654321");
+        public void InserirCelular()
+        {
+            _helper.Escrever("//input[contains(@placeholder, 'Insira seu celular')]", "11987654321");
+        }
         #endregion
 
         #region Coberturas Plano Personalizado
@@ -78,7 +81,11 @@ namespace Simple2u.PageObjects
             Thread.Sleep(3000);
         }
 
-        public void ScrollarParaAssistencias() => _helper.Scrollar("//span[contains(text(), 'Assistências')]");
+        public void ScrollarParaAssistencias()
+        {
+            _helper.GerenciarHorasOuVerba();
+            _helper.Scrollar("//span[contains(text(), 'Despesas Médico-Hospitalares e Odontológicas por Acidente')]");    //("//span[contains(text(), 'Assistências')]");
+        }
 
         public void CoberturasExtras()
         {
@@ -129,11 +136,14 @@ namespace Simple2u.PageObjects
         public void ClicarAvancar()
         {
             _helper.AguardarTotalCarregamento();
+            Thread.Sleep(2000);
             _helper.Clicar("//span[contains(text(), 'Avançar')]");
         }
         #endregion
 
         public void InserirCodigoVerificacao(string codigoVerificacao) => _helper.Escrever($"//input[contains(@id, 'b3-Input_Cod1')]", codigoVerificacao.ToString());
+
+        public void InserirCodigoVerificacaoRecompra(string codigoVerificacao) => _helper.Escrever($"//input[contains(@id, 'b2-Input_Cod1')]", codigoVerificacao.ToString());
 
         public void ClicarConfirmarCodigoVerificacao() => _helper.Clicar("//span[contains(text(), 'Confirmar')]");
 
