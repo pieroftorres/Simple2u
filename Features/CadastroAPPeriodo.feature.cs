@@ -143,6 +143,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 18
  testRunner.And("que eu insira os Dados do Cartão", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
+#line 19
+ testRunner.And("que eu verifique se chegou a última página", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

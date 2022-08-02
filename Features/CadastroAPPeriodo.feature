@@ -16,3 +16,4 @@ Cenário: Cadastro AP Período
 	E que eu acesse o email e pegue o token
 	E que eu insira o Código de Verificação
 	E que eu insira os Dados do Cartão
+	E que eu verifique se chegou a última página

@@ -108,7 +108,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("que eu confirme que tenho conta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 7
- testRunner.And("que eu insira o CPF já cadastrado 73689378087", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu insira o CPF já cadastrado 62042791067", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 8
  testRunner.And("que eu selecione o seguro Acidentes Pessoais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");

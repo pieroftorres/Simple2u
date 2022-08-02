@@ -4,7 +4,7 @@ Cenário: Recompra AP Por um período
 	Dado que eu acesse a url
 	E que eu inicie a Simulação
 	E que eu confirme que tenho conta
-	E que eu insira o CPF já cadastrado 73689378087
+	E que eu insira o CPF já cadastrado 62042791067
 	E que eu selecione o seguro Acidentes Pessoais
 	E que eu insira a data de nascimento e a profissão
 	E que eu clique no seguro Por um período
