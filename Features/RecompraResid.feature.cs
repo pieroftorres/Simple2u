@@ -108,7 +108,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("que eu confirme que tenho conta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 7
- testRunner.And("que eu insira o CPF já cadastrado 25698995001", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu insira o CPF já cadastrado 61634375432", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 8
  testRunner.And("que eu selecione o seguro Residencial", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
@@ -138,9 +138,21 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("que eu clique em Avançar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 17
- testRunner.And("que eu insira a senha", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("que eu solicite redefinição de senha", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 18
+ testRunner.And("que eu acesse o email e pegue o token", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 19
+ testRunner.And("que eu insira o Código de Verificação Recompra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 20
+ testRunner.And("que eu crie uma senha", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 21
+ testRunner.And("que eu confirme a mensagem de senha criada", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 22
  testRunner.And("que eu selecione o cartão para recorrência", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }

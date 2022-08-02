@@ -75,6 +75,7 @@ namespace Simple2u.Steps
         {
             cadastroPage.InserirCPF();
             cadastroPage.ConcordarComTermos();
+            Thread.Sleep(3000);
             cadastroPage.ClicarAvancar();
         }
 

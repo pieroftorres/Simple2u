@@ -20,7 +20,7 @@ namespace Simple2u.PageObjects
 
         public void ResidencialEndereco(string cep, string numero, string complemento)
         {
-            _helper.Escrever("//input[contains(@placeholder, 'CEP')]", cep);
+            _helper.Escrever("//input[contains(@id, 'Input_CEP')]", cep);
             _helper.Escrever("//input[contains(@placeholder, 'Número')]", numero);
             _helper.Escrever("//input[contains(@placeholder, 'Complemento')]", complemento);
         }

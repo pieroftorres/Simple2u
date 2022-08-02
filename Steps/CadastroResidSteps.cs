@@ -1,6 +1,7 @@
 ﻿using Simple2u.Config;
 using Simple2u.Models;
 using Simple2u.PageObjects;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Simple2u.Steps
@@ -34,6 +35,7 @@ namespace Simple2u.Steps
         [Given(@"que eu informe no endereço o CEP (.*), o Número (.*) e o Complemento (.*)")]
         public void GivenQueEuInformeNoEnderecoCEPNumeroComplemento(string cep, string numero, string complemento)
         {
+            Thread.Sleep(2000);
             cadastroResidPage.ResidencialEndereco(cep, numero, complemento);
             cadastroPage.ClicarAvancar();
         }
