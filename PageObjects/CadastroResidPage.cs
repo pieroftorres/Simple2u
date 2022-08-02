@@ -35,7 +35,7 @@ namespace Simple2u.PageObjects
 
         public void TelefoneResid(string celular)
         {
-            _helper.Escrever("//input[contains(@placeholder, 'Insira seu celular')]", celular);
+            _helper.Escrever("//input[contains(@id, 'input_telefone')]", celular);
         }
 
         public void EscolherPlano(string plano) => _helper.Clicar($"//span[contains(text(), '{plano}')]/../..//span[contains(text(), 'Escolher Plano')]");

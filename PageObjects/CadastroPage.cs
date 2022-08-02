@@ -70,7 +70,7 @@ namespace Simple2u.PageObjects
         #region Telefone Tipo Produto AP
         public void InserirCelular()
         {
-            _helper.Escrever("//input[contains(@placeholder, 'Insira seu celular')]", "11987654321");
+            _helper.Escrever("//input[contains(@id, 'input_telefone')]", "11987654321");
         }
         #endregion
 
@@ -151,7 +151,7 @@ namespace Simple2u.PageObjects
         {
             //_helper.AguardarLoading("//div[contains(@class, 'container-ana-text-size-customized')]");
             Thread.Sleep(15000);
-            _helper.ValidarUrl("Parabens");
+            _helper.ProcurarElemento("//span[contains(text(), 'Parabéns')]");
         }
     }
 }
